@@ -13,6 +13,6 @@ echo "Building application"
 #Execute the command provided
 `echo $INPUT_BUILD_COMMAND` 
 
-echo `aws --region $INPUT_AWS_DEFAULT_REGION s3 sync ./dist s3://$INPUT_AWS_BUCKET_NAME --no-progress --delete`
+echo "aws --region $INPUT_AWS_DEFAULT_REGION s3 sync ./dist s3://$INPUT_AWS_BUCKET_NAME --no-progress --delete"
 #Sync files with amazon s3 bucket app
 aws --region $INPUT_AWS_DEFAULT_REGION s3 sync ./dist s3://$INPUT_AWS_BUCKET_NAME --no-progress --delete
