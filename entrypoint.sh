@@ -17,9 +17,14 @@ echo "Building application"
 #Sync files with amazon s3 bucket app
 aws --region $INPUT_AWS_DEFAULT_REGION s3 sync ./dist s3://$INPUT_AWS_BUCKET_NAME --no-progress --delete
 
+aws s3api get-bucket-website --region $INPUT_AWS_DEFAULT_REGION --bucket "$INPUT_AWS_BUCKET_NAME"
+
 redirect_rules_file="redirect_rules.json"
 cat <<EOF > "$redirect_rules_file"
 {
+  "IndexDocument": {
+    "Suffix": "index.html"
+  },
   "RoutingRules": [
 EOF
 
