@@ -37,3 +37,4 @@ runs:
     AWS_BUCKET_NAME: ${{ inputs.AWS_BUCKET_NAME }}
     APP_SOURCE_CODE: ${{ inputs.APP_SOURCE_CODE }}
     BUILD_COMMAND: ${{ inputs.BUILD_COMMAND }}
+    AWS_DISTRIBUTION_ID: ${{ inputs.AWS_DISTRIBUTION_ID }}
