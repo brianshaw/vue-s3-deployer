@@ -18,6 +18,9 @@ inputs:
   AWS_BUCKET_NAME:
     description: "Aws bucket name"
     required: true
+  AWS_DISTRIBUTION_ID:
+    description: "Aws distribution id"
+    required: true
   APP_SOURCE_CODE:
     description: "Source files location. Default: root directory."
     required: false
